@@ -8,15 +8,17 @@ public class Checker {
         }
     }
 
-    public void isStartInArray(int indexOfStart){
-        if (indexOfStart == -1){
-            throw new IllegalArgumentException("Start element does not exist in the array!");
+    public int isStartOutOfTheLimits(int indexOfStart){
+        if (indexOfStart < 0){
+            return Math.abs(indexOfStart + 1);
         }
+        return indexOfStart;
     }
 
-    public void isEndInArray(int indexOfEnd){
-        if (indexOfEnd == -1){
-            throw new IllegalArgumentException("End element does not exist in the array!");
+    public int isEndOutOfTheLimits(int indexOfEnd){
+        if (indexOfEnd < 0){
+            return Math.abs(indexOfEnd + 1);
         }
+        return indexOfEnd + 1;
     }
 }
