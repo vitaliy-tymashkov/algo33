@@ -10,14 +10,14 @@ public class Checker {
 
     public int isStartOutOfTheLimits(int indexOfStart){
         if (indexOfStart < 0){
-            return Math.abs(indexOfStart + 1);
+            return Math.abs(indexOfStart) - 2;
         }
-        return indexOfStart;
+        return indexOfStart - 1;
     }
 
     public int isEndOutOfTheLimits(int indexOfEnd){
         if (indexOfEnd < 0){
-            return Math.abs(indexOfEnd + 1);
+            return Math.abs(indexOfEnd) - 1;
         }
         return indexOfEnd + 1;
     }

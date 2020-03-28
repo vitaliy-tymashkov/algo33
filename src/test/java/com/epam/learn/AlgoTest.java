@@ -21,6 +21,30 @@ public class AlgoTest {
     }
 
     @Test
+    public void testRun_arrayOfRepetitiveNumbers1_result5() {
+        int[] testData = {1,2,3,3,3,3,3,8,9};
+        int start = 3;
+        int end = 3;
+        int expectedResult = 5;
+
+        int result = Algo.run(testData, start, end);
+        Logger.showResult(result);
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void testRun_arrayOfRepetitiveNumbers2_result9() {
+        int[] testData = {3,3,3,3,3,3,3,3,3};
+        int start = 3;
+        int end = 3;
+        int expectedResult = 9;
+
+        int result = Algo.run(testData, start, end);
+        Logger.showResult(result);
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
     public void testRun_arrayOfTenNonConsecutiveNumbers_result4() {
         int[] testData = {1,3,8,15,34,56,88,89,90};
         int start = 4;
@@ -51,12 +75,23 @@ public class AlgoTest {
     }
 
     @Test
-    public void testRun_noStartAndEndElements_Result10() {
+    public void testRun_noStartAndEndElements_Result9() {
         int[] testData = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int start = 0;
         int end = 10;
-
         int expectedResult = 9;
+
+        int result = Algo.run(testData, start, end);
+        Logger.showResult(result);
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void testRun_noStartAndEndElementsInMiddle_Result4() {
+        int[] testData = {1, 21, 32, 43, 54, 65, 76, 87, 98};
+        int start = 50;
+        int end = 88;
+        int expectedResult = 4;
 
         int result = Algo.run(testData, start, end);
         Logger.showResult(result);
